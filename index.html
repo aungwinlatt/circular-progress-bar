@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="skill">
+      <div class="outer">
+        <div class="inner">
+          <div id="html"></div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="160px"
+        height="160px"
+      >
+        <defs>
+          <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#4568DC" />
+            <stop offset="100%" stop-color="#B06AB3" />
+          </linearGradient>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+      </svg>
+      <p class="h-title">Html</p>
+    </div>
+
+    <div class="skill">
+      <div class="outer">
+        <div class="inner">
+          <div id="css"></div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="160px"
+        height="160px"
+      >
+        <defs>
+          <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#4568DC" />
+            <stop offset="100%" stop-color="#B06AB3" />
+          </linearGradient>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke-linecap="round" class="css" />
+      </svg>
+      <p class="c-title">Css</p>
+    </div>
+
+    <div class="skill">
+      <div class="outer">
+        <div class="inner">
+          <div id="js"></div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="160px"
+        height="160px"
+      >
+        <defs>
+          <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#4568DC" />
+            <stop offset="100%" stop-color="#B06AB3" />
+          </linearGradient>
+        </defs>
+        <circle cx="80" cy="80" r="70" stroke-linecap="round" class="js" />
+      </svg>
+      <p class="j-title">JavaScript</p>
+    </div>
+
+    <script>
+      function counter(selector,endPercentage,sec) {
+        let obj = document.querySelector(selector);
+        let counter = 0;
+        let x = setInterval(() => {
+          if (counter == endPercentage) {
+            clearInterval(x)
+          } else {
+            counter += 1;
+            obj.innerHTML = counter + "%"; 
+          }
+          console.log("counter from" +selector+ "-" +counter);
+        }, sec);
+      }
+      counter("#html",65,30);
+      counter("#css",75,25);
+      counter("#js",50,35);
+    </script>
+  </body>
+</html>
